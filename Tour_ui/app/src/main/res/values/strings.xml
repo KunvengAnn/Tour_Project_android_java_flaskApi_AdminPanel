@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SiemReaperTour</string>
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+    <!--for spinner -->
+    <string-array name="titles">
+        <item>Select title</item>
+        <item>Mr</item>
+        <item>Mrs</item>
+    </string-array>
+</resources>

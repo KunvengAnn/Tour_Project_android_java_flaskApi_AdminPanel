@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Here is a thorough description of a company tour:"
+              android:textSize="18sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16dp"
+              android:text="A company tour is an organized visit to a business or organization's facilities, designed to give visitors an inside look at the company's operations, work environment, and overall culture. The purpose of a company tour is typically to showcase the company's capabilities, products, or services, as well as to provide insights into the day-to-day workings of the organization.\n\nDuring a company tour, visitors are typically led by a knowledgeable guide, who will provide information and commentary about the various departments, processes, and functions of the business. The tour may include stops at the production floor, research and development labs, corporate offices, or other relevant areas, depending on the nature of the company's operations.\n\nCompany tours can serve a variety of purposes, including:\n\n• Recruitment and Talent Acquisition: Company tours can be used to attract and engage potential job candidates, allowing them to gain a firsthand understanding of the company's work environment, culture, and opportunities.\n• Client and Partner Engagement: Companies may offer tours to current or potential clients, suppliers, or strategic partners to build trust, demonstrate capabilities, and strengthen business relationships.\n• Public Relations and Community Engagement: Company tours can be used to showcase the company's commitment to transparency, sustainability, or community involvement, helping to build a positive public image.\n• Employee Engagement and Onboarding: Existing employees, especially new hires, may participate in company tours to gain a deeper understanding of the organization's different departments and functions."
+              android:textSize="16sp" />
+      </LinearLayout>
+    </ScrollView>
+</LinearLayout>

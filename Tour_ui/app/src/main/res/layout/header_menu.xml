@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#C6A03F"
+    android:gravity="bottom"
+    android:padding="20dp">
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="75dp"-->
+<!--        app:cardCornerRadius="15dp"-->
+<!--        app:cardElevation="0dp">-->
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/custom_logo"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <TextView
+        android:id="@+id/id_headerDrawerNavigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="About Siem Reaper"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,370 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/id_AppBarLayout_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorGrey"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:id="@+id/HeaderRelative"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorGrey">
+
+                <ImageView
+                    android:id="@+id/id_btnBackCheckBill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/arrow_back_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="20sp"
+                    android:text="Check Bill"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <EditText
+          android:id="@+id/EditTextSearchBill"
+          android:layout_below="@+id/id_AppBarLayout_check"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Search ID Bill"
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:inputType="text"/>
+
+      <!---->
+          <LinearLayout
+              android:id="@+id/linearLayoutTextMassage"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:visibility="visible"
+              android:layout_below="@+id/EditTextSearchBill"
+              android:layout_centerVertical="true"
+              android:layout_centerHorizontal="true"
+              android:orientation="vertical">
+
+              <TextView
+                  android:id="@+id/TextView_CheckBill"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_vertical|center_horizontal"
+                  android:text="please search by ID Bill"/>
+          </LinearLayout>
+
+          <ScrollView
+              android:layout_below="@+id/id_AppBarLayout_check"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <RelativeLayout
+                  android:id="@+id/contenBilltShow"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:layout_width="match_parent"
+                  android:visibility="gone"
+                  android:layout_height="match_parent">
+
+                  <!-- Content LinearLayout -->
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/linearTOP"
+                          android:orientation="horizontal">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="24dp"
+                              android:text="Bill ID: "/>
+                          <TextView
+                              android:id="@+id/Bill_ID_TextView"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="24dp" />
+                      </LinearLayout>
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/linearTOP"
+                          android:id="@+id/layNear0"
+                          android:orientation="horizontal">
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="18dp"
+                              android:text="Title: "/>
+                          <TextView
+                              android:id="@+id/Bill_TitleTextView"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="18dp"
+                              android:text=""/>
+
+                          <TextView
+                              android:layout_width="70dp"
+                              android:layout_height="wrap_content"
+                              android:textSize="18dp" />
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="18dp"
+                              android:text="FirstName: "/>
+                          <TextView
+                              android:id="@+id/Bill_FirstNameTextView"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="18dp"
+                              android:text=""/>
+                      </LinearLayout>
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/layNear0"
+                          android:orientation="vertical">
+
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="Last Name: "/>
+                              <TextView
+                                  android:id="@+id/Bill_LastNameTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="Email: "/>
+                              <TextView
+                                  android:id="@+id/Bill_EmailTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="TelePhone: "/>
+                              <TextView
+                                  android:id="@+id/Bill_PhoneTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="Country: "/>
+                              <TextView
+                                  android:id="@+id/Bill_CountryTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="Tour Name: "/>
+                              <TextView
+                                  android:id="@+id/Bill_TourNameTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="Tour Price: "/>
+                              <TextView
+                                  android:id="@+id/Bill_TourPriceTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="Date of Departure: "/>
+                              <TextView
+                                  android:id="@+id/Bill_DateDepartureTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="Tour Location: "/>
+                              <TextView
+                                  android:id="@+id/Bill_TourLocationTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="Tour Duration: "/>
+                              <TextView
+                                  android:id="@+id/Bill_TourDurationTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="Number Child: "/>
+                              <TextView
+                                  android:id="@+id/BillNumberChildTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="Number Adult: "/>
+                              <TextView
+                                  android:id="@+id/BillNumberAdultTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text="ToTal Amount: "/>
+                              <TextView
+                                  android:id="@+id/Bill_TotalAmountTextView"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="18dp"
+                                  android:text=""/>
+                          </LinearLayout>
+                      </LinearLayout>
+                  </RelativeLayout>
+              </RelativeLayout>
+          </ScrollView>
+  </LinearLayout>
+</LinearLayout>

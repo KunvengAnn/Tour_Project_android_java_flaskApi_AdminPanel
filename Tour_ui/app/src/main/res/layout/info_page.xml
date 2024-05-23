@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/id_AppBarLayoutInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:background="@color/colorGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetRight="0dp"
+                    app:contentInsetEnd="0dp">
+
+                    <!---->
+                    <RelativeLayout
+                        android:id="@+id/HeaderRelative"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorGrey">
+
+                        <ImageView
+                            android:id="@+id/id_btn_backInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:background="@drawable/arrow_back_btn" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="Info" />
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/id_btn_backInfo"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:background="@drawable/ar" />-->
+                    </RelativeLayout>
+                    <!--end-->
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_AppBarLayoutInfo"
+                android:orientation="vertical"
+                tools:ignore="NotSibling">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textColor="@color/colorConcrete" />
+
+                <Spinner
+                    android:id="@+id/spinnerTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Name" />
+
+                <EditText
+                    android:id="@+id/FirstNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name" />
+
+                <EditText
+                    android:id="@+id/LastNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email" />
+
+                <EditText
+                    android:id="@+id/EmailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number" />
+
+                <EditText
+                    android:id="@+id/PhoneNumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Phone Number" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Age" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/AgeEditText"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Age" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From Country" />
+
+                <EditText
+                    android:id="@+id/CountryEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Country" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date of Departure" />
+
+                <EditText
+                    android:id="@+id/editTextDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Select Date" />
+
+                <!--add and minus Adult -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:text="Quantity Adult:"/>
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:id="@+id/id_btn_minus_adult"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/icons8_minus_50"/>
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/id_quantity_adult"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="0"/>
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:id="@+id/id_btn_add_adult"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/icons8_plus_50"/>
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"/>
+                    <!--quantity child-->
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:text="Quantity Child:"/>
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:id="@+id/id_btn_minus_child"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/icons8_minus_50"/>
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/id_quantity_child"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="0"/>
+                    <TextView
+                        android:layout_width="7dp"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/id_btn_add_child"
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/icons8_plus_50" />
+                </LinearLayout>
+
+                <!--Total amount and btn payment-->
+               <FrameLayout
+                   android:layout_marginTop="30dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:id="@+id/id_TLTextView"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Total Amount:"
+                           android:textStyle="bold"
+                           android:textSize="19dp"/>
+                       <TextView
+                           android:id="@+id/id_ToTalAmountTextView"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_below="@+id/id_TLTextView"
+                           android:textSize="18dp"
+                           android:text=""/>
+                   </RelativeLayout>
+                   <androidx.cardview.widget.CardView
+                       android:id="@+id/cardViewBtnInfo"
+                       android:layout_width="200dp"
+                       android:layout_height="50dp"
+                       android:layout_gravity="end"
+                       app:cardBackgroundColor="#31333E"
+                       app:cardCornerRadius="10dp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:text="payment"
+                           android:textColor="@color/white"
+                           android:textSize="14sp"
+                           android:textStyle="bold" />
+                   </androidx.cardview.widget.CardView>
+               </FrameLayout>
+                <!--End Total amount and btn payment-->
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <!--section FloatingBtn-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+    </FrameLayout>
+    <!--End section Btn-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

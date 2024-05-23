@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_cardViewR"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/colorGrey"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="8dp"
+    card_view:contentPadding="8dp">
+
+    <!---->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/id_imageRecycler2"
+            android:layout_marginRight="7dp"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/id_titleTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/id_imageRecycler2"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/RelativeLayout"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/id_titleTextView2"-->
+<!--            android:layout_toRightOf="@+id/id_imageRecycler2">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/id_Location"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/location_ic"/>-->
+<!--            <TextView-->
+<!--                android:layout_toRightOf="@+id/id_Location"-->
+<!--                android:id="@+id/id_subTitle2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="subTitle"-->
+<!--                android:textColor="@color/colorConcrete"-->
+<!--                android:textSize="16dp" />-->
+<!--        </RelativeLayout>-->
+
+        <TextView
+            android:id="@+id/id_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_titleTextView2"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/id_imageRecycler2"
+            android:text="price"
+            android:textColor="@color/colorConcrete"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

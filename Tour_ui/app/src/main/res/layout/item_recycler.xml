@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Card View widget-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_cardViewR"
+    android:layout_width="225dp"
+    android:layout_height="270dp"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/colorGrey"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="8dp"
+    card_view:contentPadding="8dp">
+
+    <!---->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/id_imageRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/id_titleTextView"
+            android:layout_below="@+id/id_imageRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Escape the crazy of Siem Reap for the serenity of rural Cambodian life on this intimate mountain bike tour, limited to just eight travelers. Your guide will lead you along the sorts of dirt roads only locals know to enjoy a close encounter with real Cambodians. Stop at rice fields, a local market, a mushroom farm, a lotus farm, and handicraft workshops, and learn how rice wine is distilled."/>
+        <TextView
+            android:id="@+id/id_subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="subTitle"
+            android:textColor="@color/colorConcrete"
+            android:textSize="16dp"
+            android:gravity="end"
+            android:layout_below="@id/id_titleTextView"/>
+        <TextView
+            android:id="@+id/id_subTitleDola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="$"
+            android:textColor="@color/colorConcrete"
+            android:textSize="16dp"
+            android:gravity="start"
+            android:layout_below="@id/id_titleTextView"
+            android:layout_toRightOf="@id/id_subTitle"/>
+<!--        <TextView-->
+<!--            android:id="@+id/id_price"-->
+<!--            android:layout_alignRight="@+id/id_subTitle"-->
+<!--            android:layout_below="@+id/id_titleTextView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:text="price "-->
+<!--            android:textSize="16sp"-->
+<!--            android:textColor="@color/black"/>-->
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

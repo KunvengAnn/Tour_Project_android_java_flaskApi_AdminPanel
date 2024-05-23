@@ -1,0 +1,53 @@
+﻿.customHeigth {
+    height: 174px;
+    margin-top: 1.5%;
+    margin-left: 1%;
+}
+
+.customColor {
+    background: #95b4e3;
+}
+
+.customSizeImage {
+    height: 100px;
+    width: 100px;
+}
+
+.customMarginTop {
+    margin-top: 10px;
+}
+
+.customSizeDom {
+    width: 100%;
+    height: 600px;
+}
+
+
+
+
+
+.colortest {
+    background: blue;
+}
+
+/*style for Badges */
+
+.notification {
+    position: absolute;
+    top: -6px;
+    right: 0;
+    background-color: red;
+    /* or any color you prefer */
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.hide-badges {
+    display: none;
+}
